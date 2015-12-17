@@ -16,8 +16,6 @@ Summary: KDE library for mail transport
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-BuildRequires: cmake
-BuildRequires: ninja
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Akonadi)
 BuildRequires: cmake(KF5AkonadiMime)
@@ -25,7 +23,7 @@ BuildRequires: cmake(KF5Completion)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5ConfigWidgets)
 BuildRequires: cmake(KF5CoreAddons)
-BuildRequires: cmake(KF5PimTextEdit)
+BuildRequires: cmake(KF5PimTextEdit) >= %{version}
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KDELibs4Support)
 BuildRequires: cmake(KF5KIO)
