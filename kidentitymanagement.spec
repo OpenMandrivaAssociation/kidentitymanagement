@@ -3,7 +3,7 @@
 %define devname %mklibname KF5IdentityManagement -d
 
 Name: kidentitymanagement
-Version:	15.12.3
+Version:	16.04.0
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -18,7 +18,6 @@ License: GPL
 Group: System/Libraries
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Akonadi)
-BuildRequires: cmake(KF5AkonadiMime)
 BuildRequires: cmake(KF5Completion)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5ConfigWidgets)
@@ -71,7 +70,6 @@ Development files (Headers etc.) for %{name}.
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}*
-%{_libdir}/*.so.4*
 
 %files -n %{devname}
 %{_includedir}/*

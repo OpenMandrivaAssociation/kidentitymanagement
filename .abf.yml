@@ -1,4 +1,2 @@
-removed_sources:
-  kidentitymanagement-15.08.0.tar.xz: bb0dc21d5df800751ea785e902d2955a379119e8
 sources:
-  kidentitymanagement-15.12.3.tar.xz: 209833844c129c1c6fbb86fe41567be78bb4593b
+  kidentitymanagement-16.04.0.tar.xz: 8d59e68f0442bf80faadd104504b5b6acb0a9534
