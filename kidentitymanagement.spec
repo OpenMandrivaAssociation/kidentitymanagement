@@ -10,7 +10,7 @@ Version:	17.04.0
 %else
 %define ftpdir stable
 %endif
-Release:	1
+Release:	2
 Source0: http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 Summary: KDE library for mail transport
 URL: http://kde.org/
@@ -35,9 +35,11 @@ BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Network)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5Test)
+Conflicts:	kde-l10n < 3:17.04.0
+Conflicts:	kde-l10n < 17.04.0
 
 %description
-KDE library for mail transport
+KDE library for mail transport.
 
 %package -n %{libname}
 Summary: KDE library for mail transport
