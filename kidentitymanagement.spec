@@ -35,6 +35,8 @@ BuildRequires: cmake(Qt5Gui)
 BuildRequires: cmake(Qt5Network)
 BuildRequires: cmake(Qt5Widgets)
 BuildRequires: cmake(Qt5Test)
+Conflicts:	kde-l10n < 3:17.04.0
+Conflicts:	kde-l10n < 17.04.0
 
 %description
 KDE library for mail transport
