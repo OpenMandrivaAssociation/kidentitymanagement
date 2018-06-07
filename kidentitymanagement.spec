@@ -3,7 +3,7 @@
 %define devname %mklibname KF5IdentityManagement -d
 
 Name: kidentitymanagement
-Version:	 17.12.2
+Version:	 18.04.2
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -22,7 +22,7 @@ BuildRequires: cmake(KF5Completion)
 BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5ConfigWidgets)
 BuildRequires: cmake(KF5CoreAddons)
-BuildRequires: cmake(KF5PimTextEdit) >= %{version}
+BuildRequires: cmake(KF5PimTextEdit) >= 5.8.2
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KDELibs4Support)
 BuildRequires: cmake(KF5KIO)
@@ -68,6 +68,8 @@ Development files (Headers etc.) for %{name}.
 %find_lang libkpimidentities5
 
 %files -f libkpimidentities5.lang
+%{_sysconfdir}/xdg/kidentitymanagement.categories
+%{_sysconfdir}/xdg/kidentitymanagement.renamecategories
 %{_datadir}/dbus-1/interfaces/*.xml
 
 %files -n %{libname}
