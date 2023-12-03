@@ -35,6 +35,7 @@ BuildRequires: cmake(Qt6Gui)
 BuildRequires: cmake(Qt6Network)
 BuildRequires: cmake(Qt6Widgets)
 BuildRequires: cmake(Qt6Test)
+BuildRequires: cmake(Qt6Qml)
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
