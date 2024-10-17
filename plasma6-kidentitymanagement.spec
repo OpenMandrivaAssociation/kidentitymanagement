@@ -20,7 +20,7 @@ Source0:	https://invent.kde.org/pim/kidentitymanagement/-/archive/%{gitbranch}/k
 Source0: http://download.kde.org/%{ftpdir}/release-service/%{version}/src/kidentitymanagement-%{version}.tar.xz
 %endif
 Summary: KDE library for mail transport
-URL: http://kde.org/
+URL: https://kde.org/
 License: GPL
 Group: System/Libraries
 BuildRequires: cmake(ECM)
