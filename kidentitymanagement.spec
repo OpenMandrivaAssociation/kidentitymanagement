@@ -5,8 +5,8 @@
 %define libname %mklibname KF6IdentityManagement
 %define devname %mklibname KF6IdentityManagement -d
 
-Name: plasma6-kidentitymanagement
-Version:	25.04.0
+Name: kidentitymanagement
+Version:	25.04.1
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
 %if %{is_beta}
 %define ftpdir unstable
@@ -48,6 +48,8 @@ BuildRequires: cmake(Qt6Quick)
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt6-qttools-assistant
+# Renamed 2025-05-25 after 6.0
+%rename plasma6-kidentitymanagement
 
 %description
 KDE library for mail transport.
@@ -56,6 +58,8 @@ KDE library for mail transport.
 Summary: KDE library for mail transport
 Group: System/Libraries
 Requires: %{name} = %{EVRD}
+# Not a 1:1 replacement, but we need to get rid of old cruft
+Obsoletes: %{mklibname KF5IdentityManagement 5}
 
 %description -n %{libname}
 KDE library for mail transport.
@@ -64,6 +68,8 @@ KDE library for mail transport.
 Summary: Development files for %{name}
 Group: Development/C
 Requires: %{libname} = %{EVRD}
+# Not a 1:1 replacement, but we need to get rid of old cruft
+Obsoletes: %{mklibname -d KF5IdentityManagement}
 
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.
