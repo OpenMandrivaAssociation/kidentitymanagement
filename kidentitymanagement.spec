@@ -13,7 +13,7 @@ Version:	26.08.1
 %else
 %define ftpdir stable
 %endif
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 # cmake configs still contain a dead KPim6Mime fallback
 %global __requires_exclude cmake\\(KPim6Mime\\)|cmake\\(kpim6mime\\)
 %if 0%{?git:1}
